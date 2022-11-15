@@ -1,0 +1,683 @@
+
+
+body
+{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    object-fit: contain;
+    
+    touch-action: unset;
+}
+
+.main_game
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+    min-width: 100%;
+    object-fit: fill;
+    bottom: 0;
+    
+    touch-action: none;
+}
+
+#game_menu
+{
+    display: block;
+    position: absolute;
+    z-index: 3;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .20);
+    border-radius: 200px 200px 0 0;
+    height: 85%;
+    width: 80%;
+    bottom: 0;
+    object-fit: fill;
+}
+
+.menu_elements
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.game_logo
+{
+    height: 250px;
+    width: 250px;
+    padding-bottom: 50px;
+    margin-top:20%;
+}
+
+#game_play
+{
+    height: 90px;
+    width: 90px;
+}
+
+#game_play:hover
+{
+    color: rgba(0, 0, 0, .20);
+}
+
+#game_play_button:hover
+{
+    color: rgba(0, 0, 0, .20);
+}
+
+.gaming
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100%;
+    min-width: 26%;
+    bottom: 0;
+    
+    touch-action: none;
+}
+
+
+#counter_start
+{
+    position: absolute;
+    z-index: 4;
+    font-size: 0;
+    margin: 0;
+    transition: font-size 0.3s;
+    color: rgba(126, 126, 126, 0.3)
+}
+
+/* .counter-transform
+{
+    font-size: 0;
+} */
+
+.nav-bar
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 12%;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scores
+{
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.scores > h1
+{
+    font-size: 250%;
+    margin: 0;
+    color: rgb(88, 218, 131);
+}
+
+.scores > h4
+{
+    margin: 0;
+    color: rgb(163, 163, 163);
+}
+
+.tracks
+{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(4, 100%);
+    grid-template-rows: repeat(1, 100%);
+    
+    touch-action: none;
+}
+
+#track-1
+{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: rgb(241, 241, 241);
+    min-height: 100vh;
+    position: relative;
+    /* left: 0; */
+    
+    touch-action: none;
+}
+
+.color_of_track1
+{
+    transition-property: background-color;
+    transition-duration: 3s;
+    
+    touch-action: none;
+}
+
+#track-2
+{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    min-height: 100vh;
+    position: relative;
+    left: 0;
+    
+    touch-action: none;
+}
+
+.color_of_track2
+{
+    transition-property: background-color;
+    transition-duration: 3s;
+    
+    touch-action: none;
+}
+
+#track-3
+{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(241, 241, 241);
+    min-height: 100vh;
+    position: relative;
+    left: 0;
+    
+    touch-action: none;
+}
+
+.color_of_track3
+{
+    transition-property: background-color;
+    transition-duration: 3s;
+    
+    touch-action: none;
+}
+
+#track-4
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    min-height: 100vh;
+    position: relative;
+    left: 0;
+    
+    touch-action: none;
+}
+
+.color_of_track4
+{
+    transition-property: background-color;
+    transition-duration: 3s;
+    
+    touch-action: none;
+}
+
+.track1_viruses
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .30);
+    z-index: 1;
+    top: -100%;
+}
+
+.color_of_viruses_changing
+{
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+/* @keyframes virus-moving
+{
+    from {top: -20%;}
+    to {top: 120%;}
+} */
+/* 
+#canvas
+{
+    /* position: absolute;
+    z-index: 2;
+    background: none;
+    height: 100vh; 
+    width: 100vw;  */
+
+    /* border: 1px solid #aaa; */
+    /* border-radius: 15px; */
+    /* height: 150px; */
+    /* margin: 20px 20px; */
+    /* overflow: hidden; */
+    /* width: 100px; */
+
+
+.a0
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: 0%;
+
+    animation-name: virus-moving;
+    animation-duration: 4s;
+    
+}
+
+.a1
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: 0%;
+
+    animation-name: virus-moving;
+    animation-duration: 4s;
+    
+}
+
+.a2
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: 0%;
+
+    animation-name: virus-moving;
+    animation-duration: 4s;
+}
+
+.a3
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: 0%;
+
+    animation-name: virus-moving;
+    animation-duration: 4s;
+}
+
+.a4
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: 0%;
+
+    animation-name: virus-moving;
+    animation-duration: 4s;
+}
+
+.a5
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: 0%;
+
+    animation-name: virus-moving;
+    animation-duration: 4s;
+}
+
+.a6
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: 0%;
+
+    animation-name: virus-moving;
+    animation-duration: 4s;
+}
+
+.b0
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.b1
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.b2
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.b3
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.b4
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.b5
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.b6
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.c0
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.c1
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.c2
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.c3
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.c4
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.c5
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.c6
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.d0
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.d1
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.d2
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.d3
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.d4
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.d5
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+.d6
+{
+    height: 20%;
+    width: 70%;
+    background-color: rgb(88, 218, 131);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 1;
+    top: -100%;
+}
+
+#dead_line
+{
+    width: 100%;
+    height: 5%;
+    background: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .20);
+    bottom: 0;
+    position: absolute;
+    z-index: 5;
+}
+
+.end_menu
+{
+    display: none;
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .20);
+    border-radius: 50px;
+    width: 80%;
+    height: 30%;
+
+}
+
+.the_window_of_end
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scores_title
+{
+    color: rgb(111, 190, 137);
+    font-size: 0.8em;
+    margin: 3%;
+    margin-top: 9%;
+}
+
+.final_scores
+{
+    color: rgba(0, 0, 0, .70);
+    font-size: 3em;
+    margin: 0;
+    margin-bottom: 5%;
+}
+
+.end_buttons
+{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#replay_button
+{
+    width: 20%;
+    height: 200%;
+    margin: 0 5%;
+}
+
+.home_button
+{
+    width: 20%;
+    height: 20%;
+    margin: 0 5%;
+}
